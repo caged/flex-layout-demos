@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title>Two Column Flexbox Layout</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="stylesheet" type="text/css" href="flexbox.css" />
+  <script type="text/javascript">
+    // Nothing to do with the flexbox code.  Just a quick way to
+    // generate a bunch of child elements
+    function stuff(selector, count) {
+      var el = document.querySelector(selector)
+      for(var i = 0; i < count; i++) {
+        var item = document.createElement('div')
+        item.setAttribute('class', 'item')
+        item.innerText = "Item " + (i + 1)
+        el.appendChild(item)
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      stuff('aside.flexbox-column .content', 5)
+      stuff('section.flexbox-column .content', 15)
+    })
+  </script>
+</head>
+<body>
+  <div class="not-flexing">Works in Chrome, Webkit Nightlies and Firefox Nightlies.</div>
+  <section class="app">
+    <section class="flexbox-container">
+      <aside class="flexbox-column">
+        <section class="content"></section>
+      </aside>
+      <section class="flexbox-column">
+        <section class="content"></section>
+      </section>
+    </section>
+  </section>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body, html, .app {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 12px;
+  color: #333;
+}
+
+.app {
+  border: 1px solid lime;
+}
+
+.not-flexing {
+  padding: 20px;
+  background: #c00;
+  color: #fff;
+  font-weight: bold;
+}
+
+.item {
+  background: #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 3px;
+  width: auto;
+  margin: 10px;
+}
+
+/* Flexbox integration */
+.flexbox-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  border: 1px solid orange;
+  min-height: 100%;
+}
+
+.flexbox-column {
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  flex: 1;
+  background: #f7f7f7;
+  border: 1px solid #eee;
+  min-width: auto;
+  height: auto;
+}
+
+section.flexbox-column {
+  -webkit-flex: 2;
+  -moz-flex: 2;
+  flex: 2;
+  border: 1px solid red;
+}
+
+aside.flexbox-column {
+  border: 1px solid blue;
+}
